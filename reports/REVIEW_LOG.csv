@@ -1,0 +1,6 @@
+round,frame_id,object,action,rule_or_reason
+1,frame_0099.jpg,"xe con gần camera ở giữa đáy ảnh (cx≈556 cy≈646 px), bật đèn pha, thân xe rõ",added,"AI bỏ sót một xe lớn và rõ nhất ảnh; guideline: nhìn rõ thân xe thì vẽ box ôm sát thân, tính cả gương và đèn, không tính vệt sáng trên mặt đường"
+1,frame_0099.jpg,"xe con ở xa phía trên giữa ảnh (cx≈430 cy≈306 px), chỉ thấy đèn hậu đỏ",edited,"box AI 40×28 px rộng hơn thân xe, lấn ra nền tối; thu lại 29×22 px ôm phần thân đoán được quanh cụm đèn (IoU với box cũ 0.54)"
+1,frame_0099.jpg,"cụm xe nhỏ ở xa gần chân trời, nửa trái ảnh (cy≈284–295 px, box cao 15–18 px)",added,"AI bỏ sót đúng vị trí đã dự đoán trong BLIND_SCAN; box quanh ngưỡng 16 px nên guideline cho phép gán hoặc không, tôi chọn gán và giữ cách này cho cả lô"
+1,frame_0331.jpg,"box rộng 116 px ở giữa ảnh (cx≈500 cy≈421 px) gộp hai xe đi cạnh nhau, kèm box phụ lệch sang mặt đường trống",deleted,"guideline: hai xe đứng sát nhau vẽ hai box riêng, không gộp; giữ box xe trái (chỉnh lại) và vẽ box riêng cho xe phía trước"
+1,frame_0331.jpg,"xe bị nhòe do chuyển động và bị cắt ở mép dưới bên phải (cx≈1112 cy≈667 px)",added,"box AI 65×88 px chỉ khoanh vệt sáng nhòe; xóa và vẽ lại 183×106 px ôm vùng nhòe của thân xe và chỉ phần nằm trong ảnh (guideline: xe nhòe vẫn gán; xe cắt ở mép chỉ vẽ phần trong ảnh)"
